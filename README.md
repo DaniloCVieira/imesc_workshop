@@ -48,9 +48,32 @@ To download a single file, open it on GitHub and click **Download raw file**.
 
 The first launch installs all the packages that iMESc needs and can take several minutes. Later launches are faster. `options(timeout = 1200)` gives R more time to download iMESc on a slow connection; without it, R stops after 60 seconds.
 
-Please run these steps **before the first session**, so that the installation does not take time from the exercises.
+Please run these steps **before the first session**, so that the installation does not take time from the exercises. If the installation fails, send the instructors the error message (the last lines printed in the R console) before the workshop.
 
 iMESc needs a screen resolution of at least 1377 × 768 pixels. If panels overlap, maximise the browser window or zoom out.
+
+### Linux and macOS
+
+**Windows** needs no extra step: R installs ready-built (binary) packages.
+
+**Linux.** On Linux, R packages are compiled from source, and several of the packages used by iMESc (for maps, spatial data and some models) need system libraries. You need administrator (`sudo`) rights to install them.
+
+- **Ubuntu / Debian:** run this command in a terminal before starting iMESc. If a library is missing, iMESc stops and prints the same command with the missing ones.
+
+  ```bash
+  sudo apt update && sudo apt install -y build-essential gfortran cmake pkg-config \
+    libfontconfig1-dev libfreetype-dev libssl-dev libabsl-dev libnlopt-dev \
+    libgdal-dev gdal-bin libgeos-dev libproj-dev libsqlite3-dev libudunits2-dev \
+    libcurl4-openssl-dev libglpk-dev libmagick++-dev gsfonts libpng-dev zlib1g-dev pandoc
+  ```
+
+- **Other distributions** (Fedora, Arch, ...): install the equivalent development packages of your distribution (C/C++ and Fortran compilers, CMake, GDAL, GEOS, PROJ, SQLite, udunits2, curl, OpenSSL, fontconfig, FreeType, GLPK, NLopt, ImageMagick++, libpng, zlib and Pandoc), then start iMESc. If you are unsure, contact the instructors before the workshop.
+
+**macOS.** R installs ready-built packages, so usually no extra step is needed. If the installation complains about a missing compiler, install the Xcode Command Line Tools in the Terminal and start iMESc again:
+
+```bash
+xcode-select --install
+```
 
 ## Datasets
 
