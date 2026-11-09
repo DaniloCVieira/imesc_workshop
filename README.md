@@ -1,6 +1,6 @@
 # Applied Machine Learning for Environmental Sciences — iMESc workshop
 
-Course material for the hands-on workshop **"Applied Machine Learning for Environmental Sciences"**, part of the *Meet the Expert* activity of the Ghent University Doctoral School.
+Course material for the hands-on workshop **"Applied Machine Learning for Environmental Sciences"**, a specialist course by the Ghent University Doctoral School.
 
 **Instructors:** Prof. Gustavo Fonseca (Instituto do Mar, UNIFESP, Brazil) and Prof. Danilo C. Vieira (Instituto Oceanográfico, USP, Brazil)
 
